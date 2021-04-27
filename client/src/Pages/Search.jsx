@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const URL = "http://localhost:5000/api/product";
 
 const Search = () => {
-  const [data, setData] = useState("");
+  const [data, setData] = useState('');
   const [term, setTerm] = useState("");
   const [direction, setDirection] = useState("rtl");
 
@@ -46,6 +46,7 @@ const Search = () => {
         <Link to="shop/favourite">Favourites</Link>
       </div>
       <div className={` product ${direction}`}>
+        
         <div>{data.title}</div>
         <div>{data.price}</div>
         <div>{data.url}</div>
