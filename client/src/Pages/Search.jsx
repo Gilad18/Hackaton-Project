@@ -33,9 +33,15 @@ const Search = () => {
         <label>Paste URL here:</label>
         <input onChange={(e) => setTerm(e.target.value)} value={term} />
         <select onChange={(e) => setDirection(e.target.value)}>
-          <option value="rtl">العربية</option>
-          <option value="ltr">русский</option>
-          <option value="ltr">Français</option>
+          <option value="rtl" name="ar">
+            العربية
+          </option>
+          <option value="ltr" name="ru">
+            русский
+          </option>
+          <option value="ltr" name="fr">
+            Français
+          </option>
         </select>
         <button onClick={sendData}>Translate</button>
       </div>
@@ -43,6 +49,9 @@ const Search = () => {
         <div>{data.title}</div>
         <div>{data.price}</div>
         <div>{data.url}</div>
+        <div>
+          <img src={data.imgUrl} />
+        </div>
       </div>
 
 
