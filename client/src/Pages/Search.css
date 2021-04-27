@@ -3,12 +3,19 @@ input {
 }
 
 .search-bar {
-  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
   height: 50px;
 }
 
+.search-label {
+  color: white;
+}
 .search-field {
-  font-size: 20px;
+  margin-left: 20px;
+  /* font-size: 20px; */
 }
 iframe {
   width: 100%;
@@ -34,4 +41,15 @@ embed {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.fav-link {
+  text-decoration: none;
+  margin-left: 20px;
+  color: orangered;
+  font-weight: bold;
+}
+
+.fav-link:hover {
+  color: orange;
 }

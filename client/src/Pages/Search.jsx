@@ -25,9 +25,9 @@ const Search = () => {
   return (
     <div>
       <div className="search-bar">
-        <label>Paste URL here:</label>
+        <label className="search-label">Paste URL here:</label>
         <input
-          className="serach-field"
+          className="search-field"
           onChange={(e) => setTerm(e.target.value)}
           value={term}
         />
@@ -43,7 +43,9 @@ const Search = () => {
           </option>
         </select>
         <button onClick={sendData}>Translate</button>
-        <Link to="shop/favourite">Favourites</Link>
+        <Link className="fav-link" to="shop/favourite">
+          Favourites
+        </Link>
       </div>
       <div className={` product ${direction}`}>
         <div>{data.title}</div>
