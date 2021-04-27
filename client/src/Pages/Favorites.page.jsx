@@ -25,7 +25,7 @@ export default function Favorites() {
           <ItemCard
             key={index}
             title={item.title}
-            imgUrl={item.url}
+            imgUrl={item.imgUrl}
             id={item.id}
           />
         )
