@@ -37,6 +37,9 @@ const Search = () => {
         <div>{data.title}</div>
         <div>{data.price}</div>
         <div>{data.url}</div>
+        <div>
+          <img src={data.imgUrl} />
+        </div>
       </div>
     </div>
   );
