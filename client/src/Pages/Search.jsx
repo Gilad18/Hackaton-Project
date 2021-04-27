@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const URL = "http://localhost:5000/api/product";
 
 const Search = () => {
-  const [data, setData] = useState("");
+  const [data, setData] = useState('');
   const [term, setTerm] = useState("");
   const [direction, setDirection] = useState("rtl");
   const [spinner, setSpinner] = useState("page-loader");
@@ -59,7 +59,12 @@ const Search = () => {
       <div className={spinner}></div>
       <div className={` product ${direction}`}>
         <div className="product-title">{data.title}</div>
-        <div className="product-image">
+        <div className="product-image"
+        
+        <div>{data.title}</div>
+        <div>{data.price}</div>
+        <div>{data.url}</div>
+        <div>
           <img src={data.imgUrl} alt="" />
         </div>
         <div className="product-price">{data.price}</div>
