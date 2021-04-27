@@ -10,10 +10,12 @@ const Search = () => {
   const [term, setTerm] = useState("");
   const [direction, setDirection] = useState("rtl");
   const [spinner, setSpinner] = useState("page-loader");
+  const [currency, setCurrency] = useState("");
 
   const sendData = async () => {
     setSpinner("spinner");
     setData("");
+    setCurrency("");
     const response = await axios({
       method: "post",
       url: URL,
@@ -24,6 +26,7 @@ const Search = () => {
     console.log(response.data);
     setData(response.data);
     setSpinner("page-loader ");
+    setCurrency('ש"ח');
   };
   console.log(direction);
   return (
@@ -62,7 +65,9 @@ const Search = () => {
         <div className="product-image">
           <img src={data.imgUrl} alt="" />
         </div>
-        <div className="product-price">{data.price}</div>
+        <div className="product-price">
+          {data ? `${data.price} ${currency}` : null}
+        </div>
         <div className="product-desc">{data.description}</div>
 
         <div className="product-pay-num">{data.numOfPayments}</div>
