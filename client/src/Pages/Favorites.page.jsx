@@ -7,7 +7,7 @@ export default function Favorites() {
 
 
     return (
-        <div>
+        <div className="items-container">
             {favorites.map((item, index) => {
                 return <ItemCard key={index} title={item.title} imgUrl={item.img} id={item.id}/>
             })}
