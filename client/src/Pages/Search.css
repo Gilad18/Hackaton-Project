@@ -1,0 +1,34 @@
+input {
+  width: 300px;
+}
+
+.search-bar {
+  background-color: grey;
+  height: 50px;
+}
+
+iframe {
+  width: 100%;
+  height: 90vh;
+}
+object {
+  width: 100%;
+  height: 90vh;
+}
+embed {
+  width: 100%;
+  height: 90vh;
+}
+
+.rtl {
+  direction: rtl;
+}
+.ltr {
+  direction: ltr;
+}
+
+.product {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
