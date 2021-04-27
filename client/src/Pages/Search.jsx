@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 
 import axios from "axios";
+
 import "./Search.css";
 const URL = "http://localhost:5000/api/product";
+
+import { Link  } from 'react-router-dom'
+const URL = "get for aws people";
+
 
 const Search = () => {
   const [data, setData] = useState("");
@@ -23,6 +28,7 @@ const Search = () => {
   console.log(direction);
   return (
     <div>
+
       <div className="search-bar">
         <label>Paste URL here:</label>
         <input onChange={(e) => setTerm(e.target.value)} value={term} />
@@ -38,6 +44,16 @@ const Search = () => {
         <div>{data.price}</div>
         <div>{data.url}</div>
       </div>
+
+
+      <input onChange={(e) => setTerm(e.target.value)} value={term} />
+      <button onClick={sendData}>send</button>
+      <button onClick={getData}>receive</button>
+      <div>{data}</div>
+
+           
+      <Link to="shop/favourite">Favourites</Link>   
+
     </div>
   );
 };

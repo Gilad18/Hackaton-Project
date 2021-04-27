@@ -1,6 +1,7 @@
 import React from 'react'
 import {BrowserRouter, Route} from 'react-router-dom'
 import Header from  '../Pages/Search'
+import Favourites from '../Pages/Favorites.page'
 
 export default function Route() {
     return (

@@ -1,12 +1,19 @@
 
+
 import Search from "./Pages/Search";
 import "./App.css";
+
+
+import logo from './logo.svg';
+import './App.css';
+import Route from './Routes/Route'
 
 
 
 function App() {
   return (
     <div className="App">
+
 
       <Search />
 
@@ -25,6 +32,9 @@ function App() {
           Learn React
         </a>
       </header>
+
+
+    <Route/>
 
     </div>
   );
