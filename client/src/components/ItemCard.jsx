@@ -1,9 +1,11 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 
 export default function ItemCard({title, imgUrl, id}) {
+    const history = useHistory();
 
     const handler = () => {
-        
+        history.push(`/shop/product/${id}`);
     }
 
     return (
