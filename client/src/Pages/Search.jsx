@@ -9,8 +9,11 @@ const Search = () => {
   const [data, setData] = useState("");
   const [term, setTerm] = useState("");
   const [direction, setDirection] = useState("rtl");
+  const [spinner, setSpinner] = useState("page-loader");
 
   const sendData = async () => {
+    setSpinner("spinner");
+    setData("");
     const response = await axios({
       method: "post",
       url: URL,
@@ -20,6 +23,7 @@ const Search = () => {
     });
     console.log(response.data);
     setData(response.data);
+    setSpinner("page-loader ");
   };
   console.log(direction);
   return (
@@ -52,13 +56,17 @@ const Search = () => {
           Favourites
         </Link>
       </div>
+      <div className={spinner}></div>
       <div className={` product ${direction}`}>
-        <div>{data.title}</div>
-        <div>{data.price}</div>
-        <div>{data.url}</div>
-        <div>
+        <div className="product-title">{data.title}</div>
+        <div className="product-image">
           <img src={data.imgUrl} alt="" />
         </div>
+        <div className="product-price">{data.price}</div>
+        <div className="product-desc">{data.description}</div>
+
+        <div className="product-pay-num">{data.numOfPayments}</div>
+        <div className="product-url">{data.url}</div>
       </div>
     </div>
   );
