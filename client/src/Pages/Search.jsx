@@ -31,7 +31,10 @@ const Search = () => {
           onChange={(e) => setTerm(e.target.value)}
           value={term}
         />
-        <select onChange={(e) => setDirection(e.target.value)}>
+        <select
+          className="select-options"
+          onChange={(e) => setDirection(e.target.value)}
+        >
           <option value="rtl" name="ar">
             العربية
           </option>
@@ -42,8 +45,10 @@ const Search = () => {
             Français
           </option>
         </select>
-        <button onClick={sendData}>Translate</button>
-        <Link className="fav-link" to="shop/favourite">
+        <button className="trans-button" onClick={sendData}>
+          Translate
+        </button>
+        <Link className="fav-link" to="/favourite">
           Favourites
         </Link>
       </div>
@@ -55,8 +60,6 @@ const Search = () => {
           <img src={data.imgUrl} alt="" />
         </div>
       </div>
-
-      <div>{data}</div>
     </div>
   );
 };

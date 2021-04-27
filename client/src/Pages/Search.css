@@ -6,16 +6,24 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-color: #363636;
   height: 50px;
 }
 
 .search-label {
   color: white;
+  font-size: 20px;
 }
 .search-field {
   margin-left: 20px;
-  /* font-size: 20px; */
+  font-size: 20px;
+  outline: none;
+  width: 500px;
+}
+
+.select-options {
+  font-size: 20px;
+  padding-left: 5px;
 }
 iframe {
   width: 100%;
@@ -46,8 +54,18 @@ embed {
 .fav-link {
   text-decoration: none;
   margin-left: 20px;
-  color: orangered;
-  font-weight: bold;
+  color: white;
+
+  font-size: 20px;
+}
+
+.trans-button {
+  background: #4875d0;
+  border-radius: 5px;
+  color: white;
+  margin-left: 5px;
+  font-size: 16px;
+  padding: 4px;
 }
 
 .fav-link:hover {

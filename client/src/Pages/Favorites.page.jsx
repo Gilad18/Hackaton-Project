@@ -10,10 +10,10 @@ export default function Favorites() {
       {favorites.map((item, index) => {
         return (
           <ItemCard
-            key={index}
-            title={item.title}
-            imgUrl={item.img}
-            id={item.id}
+          // key={index}
+          // title={item.title}
+          // imgUrl={item.img}
+          // id={item.id}
           />
         );
       })}
