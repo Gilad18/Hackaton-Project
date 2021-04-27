@@ -1,13 +1,9 @@
 import React, { useState } from "react";
-
 import axios from "axios";
-
 import "./Search.css";
+import { Link } from "react-router-dom";
+
 const URL = "http://localhost:5000/api/product";
-
-import { Link  } from 'react-router-dom'
-const URL = "get for aws people";
-
 
 const Search = () => {
   const [data, setData] = useState("");
@@ -28,10 +24,13 @@ const Search = () => {
   console.log(direction);
   return (
     <div>
-
       <div className="search-bar">
         <label>Paste URL here:</label>
-        <input onChange={(e) => setTerm(e.target.value)} value={term} />
+        <input
+          className="serach-field"
+          onChange={(e) => setTerm(e.target.value)}
+          value={term}
+        />
         <select onChange={(e) => setDirection(e.target.value)}>
           <option value="rtl" name="ar">
             العربية
@@ -44,25 +43,18 @@ const Search = () => {
           </option>
         </select>
         <button onClick={sendData}>Translate</button>
+        <Link to="shop/favourite">Favourites</Link>
       </div>
       <div className={` product ${direction}`}>
         <div>{data.title}</div>
         <div>{data.price}</div>
         <div>{data.url}</div>
         <div>
-          <img src={data.imgUrl} />
+          <img src={data.imgUrl} alt="" />
         </div>
       </div>
 
-
-      <input onChange={(e) => setTerm(e.target.value)} value={term} />
-      <button onClick={sendData}>send</button>
-      <button onClick={getData}>receive</button>
       <div>{data}</div>
-
-           
-      <Link to="shop/favourite">Favourites</Link>   
-
     </div>
   );
 };
