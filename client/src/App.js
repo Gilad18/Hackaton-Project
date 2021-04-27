@@ -12,7 +12,7 @@ function App() {
           <Header />
           {/* <Route path="/shop/welcome" exact component={Welcome} />
           <Route path="/shop/product/:product" exact component={Product} /> */}
-          <Route path="/shop/favourite" exact component={Favourites} />
+          <Route path="/favourite" exact component={Favourites} />
         </div>
       </BrowserRouter>
     </div>

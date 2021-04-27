@@ -23,6 +23,7 @@ export default function Favorites() {
       {favorites.map((item, index) => {
         return (
           <ItemCard
+
             key={index}
             title={item.title}
             imgUrl={item.imgUrl}
