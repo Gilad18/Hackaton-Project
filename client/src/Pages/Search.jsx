@@ -33,7 +33,7 @@ const Search = () => {
         </select>
         <button onClick={sendData}>Translate</button>
       </div>
-      <div className={direction}>
+      <div className={` product ${direction}`}>
         <div>{data.title}</div>
         <div>{data.price}</div>
         <div>{data.url}</div>
