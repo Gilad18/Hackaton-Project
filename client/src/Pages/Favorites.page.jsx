@@ -20,6 +20,7 @@ export default function Favorites() {
 
   return (
     <div className="items-container">
+      <div>Your Favorite products:</div>
       {favorites.map((item, index) => {
         return (
           <ItemCard
@@ -31,7 +32,7 @@ export default function Favorites() {
           />
         )
       })}
-      <div>Hi</div>
+      
     </div>
   );
 }

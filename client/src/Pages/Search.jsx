@@ -3,8 +3,8 @@ import axios from "axios";
 import "./Search.css";
 import { Link } from "react-router-dom";
 
-// const URL = "http://localhost:5000/api/product";
-const URL = "http://ec2-35-177-145-121.eu-west-2.compute.amazonaws.com";
+const URL = "http://localhost:5000/api/product";
+// const URL = "http://ec2-35-177-145-121.eu-west-2.compute.amazonaws.com";
 
 const Search = () => {
   const [data, setData] = useState("");
