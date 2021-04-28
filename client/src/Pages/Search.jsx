@@ -1,10 +1,9 @@
 import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
 import "./Search.css";
-import { Link } from "react-router-dom";
 
-// const URL = "http://localhost:5000/api/product";
-const URL = "http://ec2-35-177-145-121.eu-west-2.compute.amazonaws.com";
+const URL = "http://localhost:5000/api/product";
 
 const Search = () => {
   const [data, setData] = useState("");
@@ -12,22 +11,34 @@ const Search = () => {
   const [direction, setDirection] = useState("rtl");
   const [spinner, setSpinner] = useState("page-loader");
   const [currency, setCurrency] = useState("");
+  const [error, setError] = useState("");
+  const history = useHistory();
 
   const sendData = async () => {
-    setSpinner("spinner");
-    setData("");
-    setCurrency("");
-    const response = await axios({
-      method: "post",
-      url: URL,
-      data: {
-        url: term,
-      },
-    });
-    console.log(response.data);
-    setData(response.data);
-    setSpinner("page-loader ");
-    setCurrency('ש"ח');
+    history.push("/");
+    if (term) {
+      setError("");
+
+      setSpinner("spinner");
+      setData("");
+      setCurrency("");
+      const response = await axios({
+        method: "post",
+        url: URL,
+        data: {
+          url: term,
+        },
+      });
+
+      console.log(response.data);
+      setData(response.data);
+      setSpinner("page-loader ");
+      setCurrency('ש"ח');
+    } else {
+      setError(
+        "No URL found in search box, please paste a valid Azrieli.com product page"
+      );
+    }
   };
   console.log(direction);
   return (
@@ -56,17 +67,15 @@ const Search = () => {
         <button className="trans-button" onClick={sendData}>
           Translate
         </button>
-        <Link className="fav-link" to="/favourite">
+        <Link onClick={() => setData("")} className="fav-link" to="/favourite">
           Favourites
         </Link>
       </div>
+      <div className="no-url">{error}</div>
       <div className={spinner}></div>
       <div className={` product ${direction}`}>
         <div className="product-title">{data.title}</div>
         <div className="product-image">
-          <div>{data.title}</div>
-          <div>{data.price}</div>
-          <div>{data.url}</div>
           <div>
             <img src={data.imgUrl} alt="" />
           </div>
