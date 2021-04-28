@@ -1,23 +1,24 @@
 .items-container {
-    display: grid;
-    grid-template-columns : repeat(auto-fill, minmax(350px, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 15px;
 }
 
 .itemCard {
-    width: 10rem;
-    height: 10rem;
-    border: 1px black solid;
-    padding: 10px;
-  }
-  
-  .imageCard{
-    width: 60%;
-    height: 60%;
-    border-radius: 10px;
-  }
-  
-  .card-title {
-    font-size: 26px;
-    color: #363636;
-    font-weight: 700;
-  }
+  border-radius: 15px;
+  padding: 10px;
+  background-color: #363636;
+}
+
+.imageCard {
+  width: 60%;
+  height: 60%;
+  border-radius: 10px;
+}
+
+.card-title {
+  font-size: 22px;
+  color: #363636;
+  font-weight: 500;
+  color: white;
+}
