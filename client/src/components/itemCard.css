@@ -1,24 +1,27 @@
 .items-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 15px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+	gap: 15px;
 }
 
 .itemCard {
-  border-radius: 15px;
-  padding: 10px;
-  background-color: #363636;
+	width: 24vw;
+	height: 24vw;
+	text-align: center;
+	border-radius: 15px;
+	padding: 10px;
+	background-color: #363636;
 }
 
 .imageCard {
-  width: 60%;
-  height: 60%;
-  border-radius: 10px;
+	width: 60%;
+	height: 60%;
+	border-radius: 10px;
 }
 
 .card-title {
-  font-size: 22px;
-  color: #363636;
-  font-weight: 500;
-  color: white;
+	font-size: 22px;
+	color: #363636;
+	font-weight: 500;
+	color: white;
 }
