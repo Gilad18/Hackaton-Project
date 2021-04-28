@@ -5,6 +5,7 @@ import "./Search.css";
 
 const URL = "http://localhost:5000/api/product";
 
+
 const Search = () => {
   const [data, setData] = useState("");
   const [term, setTerm] = useState("");

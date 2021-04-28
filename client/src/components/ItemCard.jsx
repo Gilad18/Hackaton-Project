@@ -7,14 +7,15 @@ export default function ItemCard({title, imgUrl, id}) {
     const history = useHistory();
 
     const handler = () => {
-        history.push(`/shop/product/${id}`);
+        history.push(`/product/${id}`);
     }
 
     return (
         <div >
             <div className="itemCard">
-            <div>{title}</div>
+            
             <img  className="imageCard" src={imgUrl} alt={title}/>
+            <div className="card-title">{title}</div>
             <button onClick={handler}>Show More</button>
             </div>
            
